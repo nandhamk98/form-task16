@@ -1,10 +1,13 @@
+// Pre-req assignments
 const button = document.getElementById("submit");
 
+// Initializing Table container
 const tableContainer = document.getElementById("tableContainer");
 let div = document.createElement("div");
 let table = document.createElement("table");
 table.setAttribute("class", "table");
 
+// Creating Table for Form-data
 const tableCreation = function () {
   let tableRow = document.createElement("tr");
   let firstName = document.createElement("th");
@@ -40,6 +43,7 @@ const tableCreation = function () {
   tableContainer.innerHTML = div.innerHTML;
 };
 
+// Displaying data in the table
 const displayFormValues = () => {
   let firstNameValue = document.getElementById("first-name").value;
   let lastNameValue = document.getElementById("last-name").value;
@@ -89,6 +93,7 @@ const displayFormValues = () => {
   tableContainer.innerHTML = div.innerHTML;
 };
 
+// Clearing form
 const clearform = () => {
   document.getElementById("first-name").value = "";
   document.getElementById("last-name").value = "";
@@ -111,6 +116,7 @@ const clearform = () => {
   }
 };
 
+// Method to call display content on page
 const displayTableContent = () => {
   if (tableContainer.innerHTML.length === 0) {
     tableCreation();
@@ -123,4 +129,4 @@ const displayTableContent = () => {
 
 button.addEventListener("click", displayTableContent);
 
-document.querySelectorAll;
+// document.querySelectorAll;
